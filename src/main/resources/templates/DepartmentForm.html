@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="ISO-8859-1">
+	<title>department</title>
+</head>
+
+<body>
+	
+	<th:bock  th:insert="Header.html" ></th:bock>
+
+	<div class="container-fluid">
+
+		<div class="card">
+
+			<div class="card-header bg-primary text-center text-white ">
+				<h5>Department Details</h5>
+			</div>
+
+			<div class="card-body">
+
+				<form action="/department" method="post">
+
+					<div class="row p-2">
+
+						<div class="col-4"> Department Name </div>
+
+						<div class="col-6">
+							<input type="text" name="dptName" class="form-control">
+						</div>
+					</div>
+
+					<div class="row p-2">
+
+						<div class="col-4"> Department Head(HoD) </div>
+
+						<div class="col-6">
+							<input type="text" name="dptHead" class="form-control">
+						</div>
+					</div>
+
+					<div class="row p-2">
+
+						<div class="col-4"> Department Phone </div>
+
+						<div class="col-6">
+							<input type="text" name="dptPhone" class="form-control">
+						</div>
+					</div>
+
+
+					<div class="row p-2">
+
+						<div class="col-4"> </div>
+
+						<div class="col-6">
+							<input type="submit" value="Add Department" class="btn btn-success btn-lg">
+						</div>
+					</div>
+
+				</form>
+
+			</div>
+
+
+			<div class="card-footer bg-warning text-center">@copyright2025</div>
+		</div>
+
+	</div>
+
+
+</body>
+
+</html>

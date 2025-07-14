@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="ISO-8859-1">
+	<title>employeelist</title>
+</head>
+
+<body>
+
+	<th:bock th:insert="Header.html"></th:bock>
+
+	<div class="container-fluid">
+
+		<div class="card">
+
+			<div class="card-header bg-primary text-center text-white ">
+				<h5>Employee List</h5>
+			</div>
+
+			<div class="card-body">
+
+				<table class="table table-stripted">
+
+					<thead>
+						<tr>
+							<th>FirstName</th>
+							<th>LastName</th>
+							<th>Company</th>
+							<th>Phone</th>
+							<th>City</th>
+							<th>Action</th>
+						</tr>
+					</thead>
+
+					<tbody>
+
+						<tr th:each="emp : ${empList}">
+							<td>[[${emp.fname}]]</td>
+							<td>[[${emp.lname}]]</td>
+							<td>[[${emp.company}]]</td>
+							<td>[[${emp.phone}]]</td>
+							<td>[[${emp.address.city}]]</td>
+							<td>
+								<a th:href="@{/emp/edit(id=${emp.id})}"> <input type="submit" value="Edit" class="btn btn-success btn-sm"> </a>
+								<a th:href="@{/emp/delete(id=${emp.id})}"> <input type="submit" value="Delete" class="btn btn-danger btn-sm"> </a>
+							</td>
+						</tr>
+
+					</tbody>
+
+				</table>
+
+			</div>
+
+			<div class="card-footer bg-warning text-center">@copyright2025</div>
+		</div>
+
+	</div>
+
+
+
+</body>
+
+</html>

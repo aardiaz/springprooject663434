@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>gallery</title>
+</head>
+<body>
+	<th:bock  th:insert="Header.html" ></th:bock>
+	
+		<div class="container-fluid">
+	
+			<div class="card">
+	
+				<div class="card-header bg-primary text-center text-white ">
+					<h5>Product Image Gallery </h5>
+				</div>
+	
+				<div class="card-body">
+	
+					<span th:each="pd : ${prodList}">
+						<img class="p-2" th:src="@{${pd.image}}" width="300" height="300">
+					</span>					
+				</div>
+	
+				<div class="card-footer bg-warning text-center">@copyright2025</div>
+			</div>
+	
+		</div>
+	
+</body>
+</html>
